@@ -16,6 +16,7 @@ class ViewController: UIViewController
     @IBOutlet weak var computerImage: UIImageView!
     @IBOutlet weak var playerImage: UIImageView!
     @IBOutlet var pictureCollection: [UIImageView]!
+    @IBOutlet weak var winnerLabel: UILabel!
     
     
     @IBOutlet weak var horizontalStackView: UIStackView!
@@ -47,11 +48,36 @@ class ViewController: UIViewController
                 userChoice = label.tag
                 playerImage.image = images[userChoice]
                 
+              
                 
             }
         }
         
+        //Assign Computer Choice Randomly
+        let randomNum = Int.random(in: 0...2)
+        computerImage.image = images [randomNum]
+        var winner = userChoice == randomNum ? "its a tie" : ((userChoice + 2) % 3) == randomNum ? "You Win!" : "You Lose!"
+        winnerLabel.text = winner
+            
+    
+
+          
+     
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
     }
+    
     
 
 }

@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -16,8 +17,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="whd-Kr-ved">
-                                <rect key="frame" x="2" y="46" width="410" height="409"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="whd-Kr-ved">
+                                <rect key="frame" x="2" y="46" width="410" height="403"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="fB1-6C-gh4">
                                         <rect key="frame" x="0.0" y="0.0" width="410" height="29.5"/>
@@ -82,12 +83,17 @@
                                             <outletCollection property="gestureRecognizers" destination="VaA-P8-bWS" appends="YES" id="oHa-lj-SnD"/>
                                         </connections>
                                     </stackView>
-                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MN2-UW-xLJ">
-                                        <rect key="frame" x="0.0" y="129.5" width="410" height="128"/>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                    </view>
-                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" distribution="fillEqually" alignment="center" spacing="130" translatesAutoresizingMaskIntoConstraints="NO" id="5ea-ee-71a">
-                                        <rect key="frame" x="0.0" y="257.5" width="410" height="23.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5SY-Lt-13c">
+                                        <rect key="frame" x="0.0" y="129.5" width="410" height="100"/>
+                                        <color key="backgroundColor" name="AccentColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="100" id="ubV-5P-TLe"/>
+                                        </constraints>
+                                        <attributedString key="attributedText"/>
+                                        <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="130" translatesAutoresizingMaskIntoConstraints="NO" id="5ea-ee-71a">
+                                        <rect key="frame" x="0.0" y="229.5" width="410" height="23.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zza-ts-7U8">
                                                 <rect key="frame" x="0.0" y="0.0" width="140" height="23.5"/>
@@ -115,16 +121,19 @@
                                             </label>
                                         </subviews>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="g1C-Vb-Pfh">
-                                        <rect key="frame" x="0.0" y="281" width="410" height="128"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="g1C-Vb-Pfh">
+                                        <rect key="frame" x="0.0" y="253" width="410" height="150"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="s7e-72-IK3">
-                                                <rect key="frame" x="0.0" y="0.0" width="202.5" height="128"/>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="s7e-72-IK3">
+                                                <rect key="frame" x="0.0" y="0.0" width="202.5" height="150"/>
                                             </imageView>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="egp-mp-5Sb">
-                                                <rect key="frame" x="207.5" y="0.0" width="202.5" height="128"/>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="egp-mp-5Sb">
+                                                <rect key="frame" x="207.5" y="0.0" width="202.5" height="150"/>
                                             </imageView>
                                         </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="150" id="2zv-mg-8I0"/>
+                                        </constraints>
                                     </stackView>
                                 </subviews>
                             </stackView>
@@ -142,6 +151,7 @@
                         <outlet property="computerImage" destination="egp-mp-5Sb" id="qNh-jd-dtD"/>
                         <outlet property="horizontalStackView" destination="sln-ka-C1P" id="8lX-W0-IN9"/>
                         <outlet property="playerImage" destination="s7e-72-IK3" id="HZI-Wg-3r5"/>
+                        <outlet property="winnerLabel" destination="5SY-Lt-13c" id="Tgi-hf-Z9F"/>
                         <outletCollection property="pictureCollection" destination="kWH-ma-LZZ" collectionClass="NSMutableArray" id="gvo-dg-oco"/>
                         <outletCollection property="pictureCollection" destination="GcF-vq-c4O" collectionClass="NSMutableArray" id="ux0-74-bWg"/>
                         <outletCollection property="pictureCollection" destination="7JC-ro-65B" collectionClass="NSMutableArray" id="Myw-TP-rhS"/>
@@ -161,6 +171,9 @@
         <image name="paperPicture" width="1029" height="914"/>
         <image name="rockPicture" width="820" height="708"/>
         <image name="scissorsPicture" width="860" height="777"/>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="linkColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
